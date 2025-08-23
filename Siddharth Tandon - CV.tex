@@ -1,0 +1,270 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Professional CV Template - V5
+%
+% Revisions based on user feedback:
+% 1. Increased spacing in Employment History (after title and date).
+% 2. Increased spacing after Skill Category headers.
+% 3. Verified individual skills are regular weight while categories are bold.
+%
+% Created by Gemini
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt, a4paper]{article}
+
+% --- PACKAGES ---
+\usepackage[a4paper, margin=0.5in, nohead, nofoot]{geometry} % Page dimensions
+\usepackage{paracol}          % For two-column layout that can break across pages
+\usepackage[T1]{fontenc}      % Font encoding
+\usepackage[default,light]{lato} % USE LATO LIGHT FONT for a lighter, modern feel
+\usepackage[svgnames]{xcolor} % For custom colors
+\usepackage{hyperref}         % For clickable links
+\usepackage{enumitem}         % For customizing lists
+\usepackage{setspace}         % To adjust line spacing
+
+% --- GLOBAL SPACING ---
+% Increased line spacing for better readability within paragraphs
+\setstretch{1.1}
+
+% --- COLOR & HYPERLINK DEFINITIONS ---
+\definecolor{sidebarbg}{HTML}{2C3E50} % Dark slate blue for the sidebar
+\definecolor{linkcolor}{HTML}{5DADE2} % A lighter blue for links
+\definecolor{dategray}{gray}{0.55}   % Dark gray for de-emphasized dates
+
+\hypersetup{
+    pdftitle={Siddharth Tandon CV},
+    pdfauthor={Siddharth Tandon},
+    colorlinks=true,
+    urlcolor=linkcolor,
+    linkcolor=linkcolor,
+}
+
+% --- PAGE & PARAGRAPH STYLING ---
+\pagestyle{empty}      % No page numbers, headers, or footers
+\setlength{\parindent}{0pt} % No paragraph indentation
+\setlength{\columnsep}{1.5em} % Space between the two columns
+
+% --- CUSTOM COMMANDS FOR SECTIONS ---
+
+% Section style for the main (left) column
+\newcommand{\cvsection}[1]{%
+  \vspace{1.2\baselineskip}%
+  {\large\bfseries\sffamily\MakeUppercase{#1}}\par\vspace{0.4ex}%
+  {\color{black!70}\hrule height 0.8pt}\par
+  \vspace{0.8\baselineskip}%
+}
+
+% Section style for the sidebar (right) column
+\newcommand{\sidebarsection}[1]{%
+  \vspace{1.2\baselineskip}%
+  {\color{white}\bfseries\sffamily\MakeUppercase{#1}}\par%
+  \vspace{0.6ex}%
+  {\color{white!60}\hrule height 0.6pt}\par% % UPDATED: Added a decorative line
+  \vspace{0.5\baselineskip}%
+}
+
+% Sub-heading style for skills in the sidebar
+\newcommand{\skillcat}[1]{%
+    \vspace{0.8\baselineskip}%
+    {\bfseries\sffamily #1}\par\vspace{1.0ex}% % UPDATED: Increased vertical space after category
+}
+
+% --- LIST STYLING (for bullet points) ---
+\setlist[itemize]{
+  leftmargin=1.5em,  % Indentation of bullets
+  label=\textbullet,   % Bullet style
+  topsep=0.3ex,      % Space above list
+  itemsep=1.2ex,     % Increased space between items for readability
+  parsep=0ex
+}
+
+\begin{document}
+
+% --- LAYOUT SETUP: 65% for main content, 35% for sidebar ---
+\setcolumnwidth{0.65\textwidth, 0.35\textwidth}
+\backgroundcolor{c[1]}{sidebarbg} % Set background color for the second column
+
+\begin{paracol}{2}
+
+%================================================%
+% --- LEFT COLUMN (MAIN CONTENT) ---
+%================================================%
+
+% --- HEADER ---
+{\fontsize{24pt}{26pt}\selectfont\bfseries Siddharth Tandon}\par
+\vspace{0.5ex}
+{\fontsize{12pt}{14pt}\selectfont AI Architect/ Applied Scientist/  Data Scientist}\par
+
+% --- PROFILE SECTION ---
+\cvsection{Summary}
+Results-driven AI/ML Specialist with over 14 years of experience in developing and deploying machine learning models. Expertise in data analysis, algorithm development, statistical models and project management, with a commitment to leverage technology for impactful solutions. Proven track record of solving complex challenges and driving innovation through advanced analytical skills and strategic problem-solving. 
+
+% --- EMPLOYMENT SECTION ---
+\cvsection{Employment}
+{\bfseries Strategic Cloud Engineer, Google}\par
+\vspace{0.5ex} % UPDATED: Added space between title and date
+{\color{dategray}\itshape\MakeUppercase{Jun 2022 – Present}}
+\vspace{1.0ex} % UPDATED: Added space after date before bullet points
+\begin{itemize}
+    \item Led the Nl2SQL implementation for a customer using ADK framework.
+    \item Led the program for entire team to enhance fine tuning expertise (using LoRA, QLoRA, Vertex AI) within team, and guided more than 10+ pre-sales for customers.
+    \item Presented a poster in Google Research Conference 2023 for "Explicit content detection using large vision models with contrastive objective". This also got published as one of the case \href{https://cloud.google.com/customers/nexon/?hl=ko}{studies} in public domain.
+    \item Distributed training/ inferencing of large language models on TPU/ GPUs using \href{https://github.com/tensorflow/lingvo}{lingvo framework}.
+    \item Architected AI solutions for strategic customers.
+    \item Lead and implemented multiple Gen AI solutions across various use cases like summarization, RAG, etc.
+    \item Build and deployed multiple agentic systems leveraging frameworks like Langchain, Langgraph.
+    \item Deep expertise on Data Valuation using SHAP methodology.
+\end{itemize}
+\vspace{1.2\baselineskip} % Add generous vertical space between jobs
+
+{\bfseries AI \& ML Solution Architect, Microsoft}\par
+\vspace{0.5ex} % UPDATED: Added space between title and date
+{\color{dategray}\itshape\MakeUppercase{Apr 2020 – Jun 2022}}
+\vspace{1.0ex} % UPDATED: Added space after date before bullet points
+\begin{itemize}
+    \item Implemented yield forecasting to assist in supply chain by leveraging vegetation indices and land images from satellite data.
+    \item Implement ML models/ MLOPS to help customers in their AI journey.
+    \item Implemented deep learning models to detect defects in parts (using transfer learning), brain segmentation using FCNNs.
+    \item Implemented predictive/ forecasting models for manufacturing customers.
+    \item Leveraged cognitive APIs for search, text translation for various use cases.
+    \item Certified Microsoft Enterprise Data Science practitioner/ proctor.
+    \item Drive, define, and implement AI initiatives for customers on Azure.
+    \item Build end to end solution architecture for large scale technology projects.
+    \item Implement/ assist customers with big data solutions to digitize their data estate.
+    \item Manage client stakeholders, and their expectations, with regular cadence of weekly meetings and status updates.
+    \item Define business case for technological investments to be made for future needs and to remain competitive.
+\end{itemize}
+\vspace{1.2\baselineskip} % Add generous vertical space between jobs
+
+{\bfseries Consultant, Microsoft}\par
+\vspace{0.5ex} % UPDATED: Added space between title and date
+{\color{dategray}\itshape\MakeUppercase{Nov 2014 – Mar 2020}}
+\vspace{1.0ex} % UPDATED: Added space after date before bullet points
+\begin{itemize}
+    \item Architected and implemented big data solutions using Delta, Lambda and Kappa architecture leveraging Spark framework and Azure technologies.
+    \item Assisted data scientists to build ML models like detect fraudulent transactions, lead generation for customers, etc.
+    \item Lead multiple Data \& AI projects and moved them to production successfully.
+    \item Delivered sessions and mentored peers on big data technology landscape.
+    \item Assisted in the recruitment process for the team.
+\end{itemize}
+\vspace{1.2\baselineskip} % Add generous vertical space between jobs
+
+{\bfseries Sr. Software Engg., MAQ Software}\par
+\vspace{0.5ex} % UPDATED: Added space between title and date
+{\color{dategray}\itshape\MakeUppercase{Jul 2011 – Oct 2014}}
+\vspace{1.0ex} % UPDATED: Added space after date before bullet points
+\begin{itemize}
+    \item Implemented data warehouses and OLAP cubes. 
+    \item Collaborate with stakeholders/ clients to gather and analyze business requirements.
+    \item Actively involved in effort estimation, deployment plans, test plans and peer code reviews.
+    \item Break the requirements into tasks and allocate them within the team.
+    \item Responsible for delivering the project within a specified time frame.
+    \item Analyze changes and incorporate them in sprint as per the bandwidth and complexity.
+\end{itemize}
+
+% --- EDUCATION SECTION ---
+\cvsection{Education}
+{\bfseries IIT, Hyderabad} \hfill MTech \par
+\textit{2020 – 2023}
+\vspace{2ex}
+
+{\bfseries AKGEC} \hfill BTech \par
+\textit{2007 – 2011}
+
+% --- PAPERS SECTION ---
+\cvsection{Papers}
+{\bfseries \href{https://cmsworkshops.com/ICASSP2024/view_paper.php?PaperNum=4738}{FW-SHAPLEY: REAL-TIME ESTIMATION OF WEIGHTED SHAPLEY VALUES} (ICASSP 2024)}\par
+\begin{itemize}
+    \item Accepted in ICASSP 2024 under Explainable and Interpretable Machine Learning area.
+    \item Introduced an amortized framework for weighted Shapley value computation for feature attribution and data valuation setting in real-time via a learned estimator without actual target variable.
+\end{itemize}
+\vspace{1.5\baselineskip}
+{\bfseries Explicit content detection (Google Research 2023)}\par
+\begin{itemize}
+    \item Detect explicit content using large vision models with contrastive objective.
+\end{itemize}
+
+
+%================================================%
+% --- RIGHT COLUMN (SIDEBAR) ---
+%================================================%
+\switchcolumn
+
+\color{white} % Set text color to white for the entire sidebar
+\leftskip1em  % Add a small left margin/padding to the sidebar content
+\rightskip1em % Add a small right margin/padding
+\vspace*{2.5\baselineskip} % Added vertical space at the top of the sidebar
+
+\sidebarsection{Details}
+(+91) 905 269 8726\par
+\vspace{0.5ex}
+\href{mailto:siddharth.tandon1@gmail.com}{siddharth.tandon1@gmail.com}
+    
+\sidebarsection{Links}
+\href{https://scholar.google.com/citations?view_op=list_works&hl=en&authuser=1&user=REyR8UEAAAAJ}{Google Scholar}\par
+\vspace{0.5ex}
+\href{https://github.com/sidtandon2014}{GitHub}\par
+\vspace{0.5ex}
+\href{http://www.linkedin.com/in/siddharthtandon1}{LinkedIn}\par
+
+\sidebarsection{Skills}
+\skillcat{Generative AI}
+Agentic AI\par\vspace{0.4ex}
+RAG\par\vspace{0.4ex}
+Text Generation\par\vspace{0.4ex}
+Image Generation\par\vspace{0.4ex}
+
+\skillcat{Machine Learning}
+Probabilistic Models\par\vspace{0.4ex}
+Non-Probabilistic Models\par\vspace{0.4ex}
+Linear and Logistic Regression\par\vspace{0.4ex}
+Trees and Ensembling\par\vspace{0.4ex}
+SVM\par\vspace{0.4ex}
+Neural Networks\par\vspace{0.4ex}
+Clustering\par\vspace{0.4ex}
+Regularization\par\vspace{0.4ex}
+Dimensionality Reduction\par\vspace{0.4ex}
+Linear Algebra\par
+
+\skillcat{Deep Learning}
+CNN\par\vspace{0.4ex}
+NLP\par\vspace{0.4ex}
+Image Classification\par\vspace{0.4ex}
+Image Segmentation\par\vspace{0.4ex}
+Large Language Models\par\vspace{0.4ex}
+Generative AI\par\vspace{0.4ex}
+Inference Optimization\par
+
+\skillcat{Frameworks/ Languages}
+Python\par\vspace{0.4ex}
+SQL\par\vspace{0.4ex}
+Pytorch\par\vspace{0.4ex}
+ADK\par\vspace{0.4ex}
+Langchain\par\vspace{0.4ex}
+Langgraph\par\vspace{0.4ex}
+    
+
+\skillcat{Reinforcement Learning}
+Dynamic Programming\par\vspace{0.4ex}
+Monte carlo methods\par\vspace{0.4ex}
+TD methods\par\vspace{0.4ex}
+Deep Q Networks\par\vspace{0.4ex}
+RLHF/ RLAIF\par\vspace{0.4ex}
+Policy gradient (GRPO, DPO)\par
+
+\skillcat{Use cases}
+Predictive Modelling\par\vspace{0.4ex}
+Forecasting\par\vspace{0.4ex}
+Regression and classification\par\vspace{0.4ex}
+Defect Detection\par\vspace{0.4ex}
+Advanced Search\par\vspace{0.4ex}
+
+\sidebarsection{Certificates}
+Google Cloud Professional Machine Learning Engineer\par\vspace{0.4ex}
+Microsoft Certified: Enterprise Data Science Practitioner\par\vspace{0.4ex}
+Microsoft Certified: Azure Data Scientist Associate\par\vspace{0.4ex}
+Microsoft Certified: Azure Data Engineer Associate\par\vspace{0.4ex}
+Microsoft Certified: Azure AI Engineer Associate\par\vspace{0.4ex}
+
+
+\end{paracol}
+\end{document}
